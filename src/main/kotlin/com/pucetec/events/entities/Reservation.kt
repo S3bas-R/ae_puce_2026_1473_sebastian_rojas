@@ -17,6 +17,7 @@ class Reservation (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id : Long = 0L,
+
     var status: String = "ACTIVE",
 
     @Column("created_at")
@@ -28,5 +29,3 @@ class Reservation (
     @ManyToOne(fetch = FetchType.LAZY)
     val attendee: Attendee
 )
-
-

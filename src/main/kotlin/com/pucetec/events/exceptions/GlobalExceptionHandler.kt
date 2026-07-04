@@ -49,7 +49,7 @@ class GlobalExceptionHandler {
         return ResponseEntity(ExceptionResponse(ex.message, "Database"), HttpStatus.NOT_FOUND)
     }
 
-    // --- ERRORES 409: CONFLICT ---
+    // --- ERROR 409: CONFLICT ---
 
     @ExceptionHandler(SoldOutException::class)
     fun handleSoldOut(ex: SoldOutException): ResponseEntity<ExceptionResponse> {
