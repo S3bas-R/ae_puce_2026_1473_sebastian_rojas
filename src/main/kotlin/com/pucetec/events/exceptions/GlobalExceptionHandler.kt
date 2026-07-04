@@ -6,6 +6,15 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
 
+/**
+ * Molde de datos para enviar errores estructurados al cliente.
+ */
+data class ExceptionResponse (
+    val message: String?,
+    val source: String
+)
+
+
 /***
  * El RestControllerAdvice es el que vigila al sistema
  * Intercepta los errores de los controladores y genera respuestas usando 'Exception Response'

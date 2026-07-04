@@ -11,7 +11,8 @@ import com.pucetec.events.entities.Event
 fun EventRequest.toEntity() = Event(
     name = this.name,
     venue = this.venue,
-    totalTickets = this.totalTickets
+    totalTickets = this.totalTickets,
+    availableTickets = this.totalTickets
 )
 
 /**

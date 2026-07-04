@@ -11,7 +11,6 @@ import com.pucetec.events.exceptions.ReservationNotFoundException
 import com.pucetec.events.exceptions.SoldOutException
 import com.pucetec.events.mappers.toResponse
 import com.pucetec.events.repositories.AttendeeRepository
-import com.pucetec.events.repositories.AttendeesRepository
 import com.pucetec.events.repositories.EventRepository
 import com.pucetec.events.repositories.ReservationRepository
 import jakarta.transaction.Transactional
@@ -59,8 +58,8 @@ class ReservationService (
             throw ReservationLimitExceededException()
         }
 
-        // Si todo es válido:
-        // - Decrementamos las entradas del evento
+        // Si all es válido:
+        // - Disminuyo las entradas del evento
         event.availableTickets -= 1
         eventRepository.save(event)
 

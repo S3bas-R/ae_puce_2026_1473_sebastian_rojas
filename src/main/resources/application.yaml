@@ -1,3 +1,10 @@
 spring:
   application:
     name: events
+
+  # Configuración de seguridad para OAuth2 Resource Server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_yzwNALI2A

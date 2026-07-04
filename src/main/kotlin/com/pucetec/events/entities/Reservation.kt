@@ -20,7 +20,7 @@ class Reservation (
 
     var status: String = "ACTIVE",
 
-    @Column("created_at")
+    @Column(name = "created_at")
     val createdAt: LocalDateTime = LocalDateTime.now(),
 
     @ManyToOne(fetch = FetchType.LAZY)

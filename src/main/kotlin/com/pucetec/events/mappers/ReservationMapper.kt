@@ -1,6 +1,5 @@
 package com.pucetec.events.mappers
 
-import com.pucetec.events.dto.ReservationRequest
 import com.pucetec.events.dto.ReservationResponse
 import com.pucetec.events.entities.Reservation
 
