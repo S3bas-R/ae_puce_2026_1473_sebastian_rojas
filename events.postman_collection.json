@@ -1,0 +1,201 @@
+{
+  "info": {
+    "_postman_id": "df32e1a6-8ba0-496e-b0ed-b021641008df",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54630871",
+    "_collection_link": "https://go.postman.co/collection/54630871-df32e1a6-8ba0-496e-b0ed-b021641008df?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "localhost:8082/api/events",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\n{\n    \"name\": \"Mid Night Club Expressway Run\",\n    \"venue\": \"Wangan Bayshore Route, Tokyo\",\n    \"totalTickets\": 50\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8082/api/events",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://us-east-1yzwnali2a.auth.us-east-1.amazoncognito.com/oauth2/token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "type": "text",
+              "key": "grant_type",
+              "value": "authorization_code"
+            },
+            {
+              "type": "text",
+              "key": "client_id",
+              "value": "3gv2oqe4niko3s47srn1kitsk6"
+            },
+            {
+              "type": "text",
+              "key": "client_secret",
+              "value": "14qdd388f1j6fge52el3l5r2ouvcg5sperlno3701t2jj1chgeiu"
+            },
+            {
+              "type": "text",
+              "key": "code",
+              "value": "b529d234-2506-4538-997e-d7090815cb82"
+            },
+            {
+              "type": "text",
+              "key": "redirect_uri",
+              "value": "https://d84l1y8p4kdic.cloudfront.net"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://us-east-1yzwnali2a.auth.us-east-1.amazoncognito.com/oauth2/token",
+          "protocol": "https",
+          "host": [
+            "us-east-1yzwnali2a",
+            "auth",
+            "us-east-1",
+            "amazoncognito",
+            "com"
+          ],
+          "path": [
+            "oauth2",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8082/api/attendees",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJraWQiOiJqMldPV1dNeGpuZzFWRGtwcW5lOUJ1aWtyd2ZiSGptdVJaOUhyNVNlL2g4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIzNDU4NTQyOC03MGUxLTcwZGEtZjQ0Zi00MmU5ODM3Y2VmOTciLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tL3VzLWVhc3QtMV95endOQUxJMkEiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiIzZ3Yyb3FlNG5pa28zczQ3c3JuMWtpdHNrNiIsIm9yaWdpbl9qdGkiOiJkYTc4OWYzMS04MDVkLTQyYTgtOTJlMS1kYWNiOTFjNTU2MmEiLCJldmVudF9pZCI6ImJhY2I4MWYxLWI3MzQtNGVlNi1hNWY0LTAxZDA4NWVhYWVkYyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicGhvbmUgb3BlbmlkIGVtYWlsIiwiYXV0aF90aW1lIjoxNzgzMTQ2NDUyLCJleHAiOjE3ODMxNTAwNTIsImlhdCI6MTc4MzE0NjQ1MiwianRpIjoiODFhMzg1NDktOTUyNS00NDg3LWE1NTMtZTMxMGQ1NjVkMGQ1IiwidXNlcm5hbWUiOiIzNDU4NTQyOC03MGUxLTcwZGEtZjQ0Zi00MmU5ODM3Y2VmOTcifQ.qORUk0m0tDxCehrP22kdY6lVie79HCdg5y3lz4C9HaVa-rG788t7CoOx-eyHAFjy7_whsZhKOn34ywVCbOBXJLgxttc4j9DuEWyAIR1Itj7-052WWgYSZtT9wI3FoAPFUqwXFJi08XtfEjik6EehMucTKg_W-7_ajjsSnUX8kwVQVombD5YvJ5X9yBiXE4lvje_Y0vaTR9nEf5zLY9BphsEhUKfmlZhDkGH9iSK_w4AuVU4E7mULQQCkiBZnvPU_hIRpT5OFRnrKZDqYeB0uGjE53Z2z6R-rXh-pIBiTg6uod0Htb4VSyv5i_27RSM4zLPM13R3T5FFDVGBzwrS7Dw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\n      \"name\": \"Sebastian Rojas\",\n      \"email\": \"lobo@puce.com\"\n}   ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/attendees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "attendees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8082/api/reservations",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJraWQiOiJqMldPV1dNeGpuZzFWRGtwcW5lOUJ1aWtyd2ZiSGptdVJaOUhyNVNlL2g4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIzNDU4NTQyOC03MGUxLTcwZGEtZjQ0Zi00MmU5ODM3Y2VmOTciLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tL3VzLWVhc3QtMV95endOQUxJMkEiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiIzZ3Yyb3FlNG5pa28zczQ3c3JuMWtpdHNrNiIsIm9yaWdpbl9qdGkiOiJkYTc4OWYzMS04MDVkLTQyYTgtOTJlMS1kYWNiOTFjNTU2MmEiLCJldmVudF9pZCI6ImJhY2I4MWYxLWI3MzQtNGVlNi1hNWY0LTAxZDA4NWVhYWVkYyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicGhvbmUgb3BlbmlkIGVtYWlsIiwiYXV0aF90aW1lIjoxNzgzMTQ2NDUyLCJleHAiOjE3ODMxNTAwNTIsImlhdCI6MTc4MzE0NjQ1MiwianRpIjoiODFhMzg1NDktOTUyNS00NDg3LWE1NTMtZTMxMGQ1NjVkMGQ1IiwidXNlcm5hbWUiOiIzNDU4NTQyOC03MGUxLTcwZGEtZjQ0Zi00MmU5ODM3Y2VmOTcifQ.qORUk0m0tDxCehrP22kdY6lVie79HCdg5y3lz4C9HaVa-rG788t7CoOx-eyHAFjy7_whsZhKOn34ywVCbOBXJLgxttc4j9DuEWyAIR1Itj7-052WWgYSZtT9wI3FoAPFUqwXFJi08XtfEjik6EehMucTKg_W-7_ajjsSnUX8kwVQVombD5YvJ5X9yBiXE4lvje_Y0vaTR9nEf5zLY9BphsEhUKfmlZhDkGH9iSK_w4AuVU4E7mULQQCkiBZnvPU_hIRpT5OFRnrKZDqYeB0uGjE53Z2z6R-rXh-pIBiTg6uod0Htb4VSyv5i_27RSM4zLPM13R3T5FFDVGBzwrS7Dw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"attendeeId\": 1,\n    \"eventId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/reservations",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "reservations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8082/api/events",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\n{\n    \"name\": \"Mid Night Club Expressway Run\",\n    \"venue\": \"Wangan Bayshore Route, Tokyo\",\n    \"totalTickets\": 50\n}"
+        },
+        "url": {
+          "raw": "localhost:8082/api/events",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

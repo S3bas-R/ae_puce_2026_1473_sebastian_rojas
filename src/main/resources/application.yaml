@@ -1,3 +1,6 @@
+server:
+  port: 8082
+
 spring:
   application:
     name: events
@@ -7,4 +10,5 @@ spring:
     oauth2:
       resourceserver:
         jwt:
+          # URL del emisor de tokens del User Pool de AWS Cognito de prueba
           issuer-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_yzwNALI2A
